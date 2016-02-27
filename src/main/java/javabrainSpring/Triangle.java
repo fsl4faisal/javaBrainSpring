@@ -1,35 +1,22 @@
 package javabrainSpring;
 
+import java.util.List;
+
 public class Triangle {
 
-	private Point pointA, pointB, PointC;
+	private List<Point> points;
 
-	public Point getPointA() {
-		return pointA;
+	public List<Point> getPoints() {
+		return points;
 	}
 
-	public void setPointA(Point pointA) {
-		this.pointA = pointA;
+	public void setPoints(List<Point> points) {
+		this.points = points;
 	}
 
-	public Point getPointB() {
-		return pointB;
-	}
-
-	public void setPointB(Point pointB) {
-		this.pointB = pointB;
-	}
-
-	public Point getPointC() {
-		return PointC;
-	}
-
-	public void setPointC(Point pointC) {
-		PointC = pointC;
-	}
-
-	public void draw() {
-		System.out.println("points"+getPointA()+","+getPointB()+","+getPointC());
+	public void draw(){
+		for(Point point:points)
+			System.out.println(point);
 	}
 
 }

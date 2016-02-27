@@ -3,32 +3,27 @@
 
 <beans>
 	<bean id="triangle" class="javabrainSpring.Triangle">
-		<property name="pointA" ref="zeroPoint"></property>
-		<property name="pointB">
-			<!-- Inner bean used if below bean is never used anywhere else in the 
-				xml -->
-			<!-- No id tag -->
-			<bean class="javabrainSpring.Point">
-				<property name="x" value="20" />
-				<property name="y" value="0" />
-			</bean>
-		</property>
-		<property name="pointC">
-			<bean class="javabrainSpring.Point">
-				<property name="x" value="0" />
-				<property name="y" value="0" />
-			</bean>
+		<property name="points">
+			<list>
+				<ref bean="zeroPoint" />
+				<ref bean="point2" />
+				<ref bean="point3" />
+			</list>
 		</property>
 	</bean>
 
-	<!-- since its common, it is here -->
+
 	<bean id="zeroPoint" class="javabrainSpring.Point">
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
-
-	<!-- name (is the id)  is the one which is already defined -->
-	<alias name="triangle" alias="triangle-alias" />
-
+	<bean id="point2" class="javabrainSpring.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="point3" class="javabrainSpring.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
 </beans>
 
