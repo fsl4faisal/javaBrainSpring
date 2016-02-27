@@ -2,37 +2,34 @@ package javabrainSpring;
 
 public class Triangle {
 
-	private String type;
-	private int height;
-	public void draw(){
-		System.out.println("Draw traingle");
-		System.out.println("Type:"+getType()+" height: "+getHeight());
+	private Point pointA, pointB, PointC;
+
+	public Point getPointA() {
+		return pointA;
 	}
-	public String getType() {
-		return type;
+
+	public void setPointA(Point pointA) {
+		this.pointA = pointA;
 	}
-	public void setType(String type) {
-		this.type = type;
+
+	public Point getPointB() {
+		return pointB;
 	}
-	public Triangle(String type) {
-		this.type = type;
+
+	public void setPointB(Point pointB) {
+		this.pointB = pointB;
 	}
-	
-	public Triangle(int  height) {
-		this.height=height;
+
+	public Point getPointC() {
+		return PointC;
 	}
-	
-	public Triangle(String type, int height) {
-		this.type = type;
-		this.height = height;
+
+	public void setPointC(Point pointC) {
+		PointC = pointC;
 	}
-	public int getHeight() {
-		return height;
+
+	public void draw() {
+		System.out.println("points"+getPointA()+","+getPointB()+","+getPointC());
 	}
-	public void setHeight(int height) {
-		this.height = height;
-	}
-	
-	
-	
+
 }
