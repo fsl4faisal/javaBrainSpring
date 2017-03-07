@@ -3,20 +3,28 @@
 
 <beans>
 	<bean id="triangle" class="javabrainSpring.Triangle" autowire="byName">
+		<property name="PointA" ref="zeroPoint">
+		</property>
+
+		<property name="PointB">
+			<bean class="javabrainSpring.Point">
+				<property name="x" value="20" />
+				<property name="y" value="0" />
+			</bean>
+		</property>
+		<property name="pointC">
+			<bean class="javabrainSpring.Point">
+				<property name="x" value="-20" />
+				<property name="y" value="0" />
+			</bean>
+		</property>
 	</bean>
 
-
-	<bean id="pointA" class="javabrainSpring.Point">
+	<bean id="zeroPoint" class="javabrainSpring.Point">
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
-	<bean id="pointB" class="javabrainSpring.Point">
-		<property name="x" value="20" />
-		<property name="y" value="0" />
-	</bean>
-	<bean id="pointC" class="javabrainSpring.Point">
-		<property name="x" value="0" />
-		<property name="y" value="0" />
-	</bean>
+	<alias name="triangle" alias="triangle-alias" />
 </beans>
+
 

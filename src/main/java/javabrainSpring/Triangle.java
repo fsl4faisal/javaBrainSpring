@@ -1,9 +1,5 @@
 package javabrainSpring;
 
-import java.util.List;
-
-import sun.misc.Perf.GetPerfAction;
-
 public class Triangle {
 
 	private Point pointA, pointB, pointC;
